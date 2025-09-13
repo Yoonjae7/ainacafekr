@@ -1,3 +1,5 @@
+"use client"
+
 import { LuxuryReveal } from "./luxury-reveal"
 import { useLanguage } from "@/contexts/language-context"
 

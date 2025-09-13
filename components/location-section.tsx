@@ -1,3 +1,5 @@
+"use client"
+
 import { MapPin, Clock, Phone } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 

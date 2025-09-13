@@ -154,3 +154,6 @@ export function useLanguage() {
   }
   return context
 }
+
+// Export the context for direct access if needed
+export { LanguageContext }
