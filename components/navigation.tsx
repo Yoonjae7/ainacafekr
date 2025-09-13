@@ -39,7 +39,7 @@ export function Navigation() {
             <img 
               src="/transparent-logo.png" 
               alt="AINA Cafe Logo" 
-              className="h-8 w-auto transition-all duration-300 hover:scale-105 cursor-pointer"
+              className="h-12 w-auto transition-all duration-300 hover:scale-105 cursor-pointer"
             />
           </div>
 
