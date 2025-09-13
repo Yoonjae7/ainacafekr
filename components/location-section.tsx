@@ -1,14 +1,17 @@
 import { MapPin, Clock, Phone } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 export function LocationSection() {
+  const { t } = useLanguage()
+  
   return (
     <section className="py-32 bg-stone-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-light mb-6 text-stone-800">Visit Us</h2>
+          <h2 className="text-4xl md:text-5xl font-light mb-6 text-stone-800">{t('location.title')}</h2>
           <div className="w-12 h-px bg-stone-300 mx-auto mb-8"></div>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto leading-relaxed">
-            강화도 해안가에 자리한 AINA에서 특별한 시간을 보내세요.
+            {t('location.description')}
           </p>
         </div>
 
@@ -35,11 +38,10 @@ export function LocationSection() {
                   <MapPin className="h-5 w-5 text-stone-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-light text-stone-800 mb-2">Location</h3>
+                  <h3 className="text-xl font-light text-stone-800 mb-2">{t('location.hours')}</h3>
                   <div className="space-y-1 text-stone-600 leading-relaxed">
-                    <p>인천 강화군 길상면</p>
-                    <p>해안동로 116-12</p>
-                    <p className="text-sm text-stone-500 mt-2">강화도 해안가 전망 최고의 위치</p>
+                    <p>{t('location.address')}</p>
+                    <p className="text-sm text-stone-500 mt-2">Ganghwa Island's best ocean view location</p>
                   </div>
                 </div>
               </div>
@@ -49,11 +51,11 @@ export function LocationSection() {
                   <Clock className="h-5 w-5 text-stone-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-light text-stone-800 mb-2">Hours</h3>
+                  <h3 className="text-xl font-light text-stone-800 mb-2">{t('location.hours')}</h3>
                   <div className="space-y-1 text-stone-600 leading-relaxed">
-                    <p>평일 10:30 - 20:00</p>
-                    <p>주말 10:00 - 20:30</p>
-                    <p className="text-sm text-stone-500 mt-2">라스트 오더 19:30</p>
+                    <p>{t('location.hours.weekday')}</p>
+                    <p>{t('location.hours.weekend')}</p>
+                    <p className="text-sm text-stone-500 mt-2">Last order 19:30</p>
                   </div>
                 </div>
               </div>
@@ -65,9 +67,9 @@ export function LocationSection() {
                 <div>
                   <h3 className="text-xl font-light text-stone-800 mb-2">Contact</h3>
                   <div className="space-y-1 text-stone-600 leading-relaxed">
-                    <p>032-123-4567</p>
+                    <p>{t('location.phone')}</p>
                     <p>@aina_cafe</p>
-                    <p className="text-sm text-stone-500 mt-2">예약 문의 환영</p>
+                    <p className="text-sm text-stone-500 mt-2">Reservations welcome</p>
                   </div>
                 </div>
               </div>
@@ -75,10 +77,9 @@ export function LocationSection() {
 
             {/* Directions note */}
             <div className="bg-white p-6 rounded-xl border border-stone-200">
-              <h4 className="font-light text-stone-800 mb-3">찾아오시는 길</h4>
+              <h4 className="font-light text-stone-800 mb-3">Directions</h4>
               <p className="text-sm text-stone-600 leading-relaxed">
-                강화대교를 건너 해안도로를 따라 오시면 바다 전망과 함께 AINA의 아름다운 건물을 보실 수 있습니다. 넓은
-                주차공간을 준비하고 있습니다.
+                Cross Ganghwa Bridge and follow the coastal road to see AINA's beautiful building with ocean views. Ample parking space is available.
               </p>
             </div>
           </div>

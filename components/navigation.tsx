@@ -3,11 +3,13 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { LanguageToggle } from "./language-toggle"
+import { useLanguage } from "@/contexts/language-context"
 import { Menu, X } from "lucide-react"
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,28 +36,28 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-12">
             <a href="#home" className="relative text-stone-600 hover:text-stone-800 transition-colors font-light group">
-              Home
+              {t('nav.home')}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-stone-800 transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="#story"
               className="relative text-stone-600 hover:text-stone-800 transition-colors font-light group"
             >
-              Story
+              {t('nav.story')}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-stone-800 transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="#space"
               className="relative text-stone-600 hover:text-stone-800 transition-colors font-light group"
             >
-              Space
+              {t('nav.space')}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-stone-800 transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="#location"
               className="relative text-stone-600 hover:text-stone-800 transition-colors font-light group"
             >
-              Visit
+              {t('nav.visit')}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-stone-800 transition-all duration-300 group-hover:w-full"></span>
             </a>
           </div>
@@ -73,16 +75,16 @@ export function Navigation() {
           <div className="md:hidden mt-6 pb-6 border-t border-stone-200 pt-6 animate-in slide-in-from-top-2 duration-300">
             <div className="flex flex-col gap-6">
               <a href="#home" className="text-stone-600 hover:text-stone-800 transition-colors font-light">
-                Home
+                {t('nav.home')}
               </a>
               <a href="#story" className="text-stone-600 hover:text-stone-800 transition-colors font-light">
-                Story
+                {t('nav.story')}
               </a>
               <a href="#space" className="text-stone-600 hover:text-stone-800 transition-colors font-light">
-                Space
+                {t('nav.space')}
               </a>
               <a href="#location" className="text-stone-600 hover:text-stone-800 transition-colors font-light">
-                Visit
+                {t('nav.visit')}
               </a>
             </div>
           </div>

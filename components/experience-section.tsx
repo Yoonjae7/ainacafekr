@@ -1,6 +1,9 @@
 import { LuxuryReveal } from "./luxury-reveal"
+import { useLanguage } from "@/contexts/language-context"
 
 export function ExperienceSection() {
+  const { t } = useLanguage()
+  
   return (
     <section className="py-32 px-6">
       <div className="max-w-4xl mx-auto">
@@ -19,22 +22,22 @@ export function ExperienceSection() {
           <div className="space-y-8 order-1 md:order-2">
             <LuxuryReveal direction="up" delay={200}>
               <div>
-                <h2 className="text-4xl md:text-5xl font-light mb-6 text-stone-800">Mediterranean</h2>
+                <h2 className="text-4xl md:text-5xl font-light mb-6 text-stone-800">{t('experience.title')}</h2>
                 <div className="w-12 h-px bg-stone-300 mb-8"></div>
               </div>
             </LuxuryReveal>
 
             <div className="space-y-6 text-stone-600 leading-relaxed">
               <LuxuryReveal direction="up" delay={400}>
-                <p className="text-lg">신선한 재료로 정성스럽게 준비한 지중해식 브런치를 선보입니다.</p>
+                <p className="text-lg">{t('experience.description')}</p>
               </LuxuryReveal>
 
               <LuxuryReveal direction="up" delay={600}>
-                <p>엄선된 식재료와 정통 레시피로 만든 아르티잔 브레드, 신선한 샐러드, 그리고 시그니처 음료까지.</p>
+                <p>{t('experience.brunch.description')}</p>
               </LuxuryReveal>
 
               <LuxuryReveal direction="up" delay={800}>
-                <p>바다를 바라보며 즐기는 브런치는 일상에서 벗어난 특별한 경험이 될 것입니다.</p>
+                <p>{t('experience.bakery.description')}</p>
               </LuxuryReveal>
             </div>
           </div>

@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter, Playfair_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import { LanguageProvider } from "@/contexts/language-context"
 import "./globals.css"
 
 const inter = Inter({
@@ -32,8 +33,10 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={`font-sans ${inter.variable} ${playfair.variable}`}>
-        <Suspense fallback={null}>{children}</Suspense>
-        <Analytics />
+        <LanguageProvider>
+          <Suspense fallback={null}>{children}</Suspense>
+          <Analytics />
+        </LanguageProvider>
       </body>
     </html>
   )

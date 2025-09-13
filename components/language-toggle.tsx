@@ -1,28 +1,28 @@
 "use client"
 
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
+import { useLanguage } from "@/contexts/language-context"
 
 export function LanguageToggle() {
-  const [isKorean, setIsKorean] = useState(true)
+  const { language, setLanguage, t } = useLanguage()
 
   return (
     <div className="flex items-center gap-2">
       <Button
-        variant={isKorean ? "default" : "outline"}
+        variant={language === 'ko' ? "default" : "outline"}
         size="sm"
-        onClick={() => setIsKorean(true)}
+        onClick={() => setLanguage('ko')}
         className="text-sm"
       >
-        한국어
+        {t('lang.korean')}
       </Button>
       <Button
-        variant={!isKorean ? "default" : "outline"}
+        variant={language === 'en' ? "default" : "outline"}
         size="sm"
-        onClick={() => setIsKorean(false)}
+        onClick={() => setLanguage('en')}
         className="text-sm"
       >
-        English
+        {t('lang.english')}
       </Button>
     </div>
   )
