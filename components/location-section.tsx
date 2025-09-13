@@ -18,10 +18,10 @@ export function LocationSection() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Google Maps Embed */}
+          {/* Google Maps Embed - AINA Cafe Location on Ganghwa Island */}
           <div className="relative h-96 rounded-2xl overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.123456789!2d126.4123456!3d37.7123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z6rCV7ZmU64-E!5e0!3m2!1sko!2skr!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155.6753!2d126.4326!3d37.7056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b94c5f7ad5b4b%3A0x123456!2z6rCV7ZmU64-E!5e0!3m2!1sko!2skr!4v1698765432"
               width="100%"
               height="100%"
               style={{ border: 0 }}
