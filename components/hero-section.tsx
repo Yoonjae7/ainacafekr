@@ -2,7 +2,7 @@ import { AnimatedLogo } from "./animated-logo"
 
 export function HeroSection() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0 bg-gradient-to-br from-stone-50 via-stone-100 to-stone-200">
         {/* Subtle texture overlay */}
         <div

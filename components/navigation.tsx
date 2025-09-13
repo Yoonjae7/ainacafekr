@@ -11,6 +11,14 @@ export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const { t } = useLanguage()
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+    setIsMenuOpen(false) // Close mobile menu after clicking
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
@@ -35,31 +43,31 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-12">
-            <a href="#home" className="relative text-stone-600 hover:text-stone-800 transition-colors font-light group">
+            <button onClick={() => scrollToSection('home')} className="relative text-stone-600 hover:text-stone-800 transition-colors font-light group">
               {t('nav.home')}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-stone-800 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a
-              href="#story"
+            </button>
+            <button
+              onClick={() => scrollToSection('story')}
               className="relative text-stone-600 hover:text-stone-800 transition-colors font-light group"
             >
               {t('nav.story')}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-stone-800 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a
-              href="#space"
+            </button>
+            <button
+              onClick={() => scrollToSection('space')}
               className="relative text-stone-600 hover:text-stone-800 transition-colors font-light group"
             >
               {t('nav.space')}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-stone-800 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a
-              href="#location"
+            </button>
+            <button
+              onClick={() => scrollToSection('location')}
               className="relative text-stone-600 hover:text-stone-800 transition-colors font-light group"
             >
               {t('nav.visit')}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-stone-800 transition-all duration-300 group-hover:w-full"></span>
-            </a>
+            </button>
           </div>
 
           {/* Language Toggle & Mobile Menu */}
@@ -74,18 +82,18 @@ export function Navigation() {
         {isMenuOpen && (
           <div className="md:hidden mt-6 pb-6 border-t border-stone-200 pt-6 animate-in slide-in-from-top-2 duration-300">
             <div className="flex flex-col gap-6">
-              <a href="#home" className="text-stone-600 hover:text-stone-800 transition-colors font-light">
+              <button onClick={() => scrollToSection('home')} className="text-stone-600 hover:text-stone-800 transition-colors font-light text-left">
                 {t('nav.home')}
-              </a>
-              <a href="#story" className="text-stone-600 hover:text-stone-800 transition-colors font-light">
+              </button>
+              <button onClick={() => scrollToSection('story')} className="text-stone-600 hover:text-stone-800 transition-colors font-light text-left">
                 {t('nav.story')}
-              </a>
-              <a href="#space" className="text-stone-600 hover:text-stone-800 transition-colors font-light">
+              </button>
+              <button onClick={() => scrollToSection('space')} className="text-stone-600 hover:text-stone-800 transition-colors font-light text-left">
                 {t('nav.space')}
-              </a>
-              <a href="#location" className="text-stone-600 hover:text-stone-800 transition-colors font-light">
+              </button>
+              <button onClick={() => scrollToSection('location')} className="text-stone-600 hover:text-stone-800 transition-colors font-light text-left">
                 {t('nav.visit')}
-              </a>
+              </button>
             </div>
           </div>
         )}

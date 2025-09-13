@@ -7,7 +7,7 @@ export function StorySection() {
   const { t } = useLanguage()
   
   return (
-    <section className="py-32 px-6">
+    <section id="story" className="py-32 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">

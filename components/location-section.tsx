@@ -7,7 +7,7 @@ export function LocationSection() {
   const { t } = useLanguage()
   
   return (
-    <section className="py-32 bg-stone-50">
+    <section id="location" className="py-32 bg-stone-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-light mb-6 text-stone-800">{t('location.title')}</h2>
@@ -28,7 +28,7 @@ export function LocationSection() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="grayscale hover:grayscale-0 transition-all duration-500"
+              className="transition-all duration-500"
             ></iframe>
           </div>
 

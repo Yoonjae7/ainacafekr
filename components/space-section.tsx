@@ -7,7 +7,7 @@ export function SpaceSection() {
   const { t } = useLanguage()
   
   return (
-    <section className="py-32 bg-stone-50">
+    <section id="space" className="py-32 bg-stone-50">
       <div className="max-w-6xl mx-auto px-6">
         <LuxuryReveal direction="up" delay={100}>
           <div className="text-center mb-20">
