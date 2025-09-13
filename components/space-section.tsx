@@ -21,7 +21,7 @@ export function SpaceSection() {
             className="transform hover:scale-[1.02] transition-transform duration-700"
           >
             <div className="relative h-96 md:h-[500px] overflow-hidden rounded-sm">
-              <img src="/images/aina-interior.png" alt="AINA 카페 내부 전경" className="w-full h-full object-cover" />
+              <img src="/highshot1.jpg" alt="AINA 카페 내부 전경" className="w-full h-full object-cover" />
             </div>
           </LuxuryReveal>
 
