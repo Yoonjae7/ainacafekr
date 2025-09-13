@@ -36,9 +36,11 @@ export function Navigation() {
       <div className="max-w-6xl mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <h1 className="text-2xl font-light tracking-wider text-stone-800 transition-all duration-300 hover:tracking-widest cursor-pointer">
-              AINA
-            </h1>
+            <img 
+              src="/transparent-logo.png" 
+              alt="AINA Cafe Logo" 
+              className="h-8 w-auto transition-all duration-300 hover:scale-105 cursor-pointer"
+            />
           </div>
 
           {/* Desktop Navigation */}
